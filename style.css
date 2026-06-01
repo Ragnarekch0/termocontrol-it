@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  color: #222;
+  background: #fff;
+}
+
+a {
+  color: #c0392b;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== HEADER ===== */
+header {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 0;
+}
+
+.header-top {
+  background: #c0392b;
+  padding: 6px 0;
+  font-size: 13px;
+  text-align: center;
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+
+.header-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.logo-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.logo-text .name {
+  font-size: 1.35rem;
+  font-weight: bold;
+  letter-spacing: 0.01em;
+}
+
+.logo-text .name span {
+  color: #e74c3c;
+}
+
+.logo-text .tagline {
+  font-size: 0.72rem;
+  color: #aaa;
+  margin-top: 2px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.header-contacts {
+  text-align: right;
+  font-size: 13px;
+  color: #ccc;
+  line-height: 1.7;
+}
+
+.header-contacts strong {
+  color: #fff;
+  font-size: 1.05rem;
+}
+
+/* ===== NAV ===== */
+nav {
+  background: #2c2c2c;
+  border-top: 1px solid #3a3a3a;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+nav ul li a {
+  display: block;
+  padding: 13px 18px;
+  color: #ddd;
+  font-size: 0.88rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 3px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #e74c3c;
+  border-bottom-color: #e74c3c;
+  text-decoration: none;
+}
+
+/* ===== PAGE TITLE BAR ===== */
+.page-title-bar {
+  background: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+  padding: 18px 40px;
+}
+
+.page-title-bar .inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.page-title-bar h1 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.breadcrumb {
+  font-size: 0.78rem;
+  color: #888;
+  margin-top: 4px;
+}
+
+.breadcrumb a {
+  color: #888;
+}
+
+.breadcrumb a:hover {
+  color: #c0392b;
+}
+
+/* ===== MAIN LAYOUT ===== */
+.page-body {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 40px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #1a1a1a;
+  color: #aaa;
+  margin-top: 60px;
+  padding: 30px 40px;
+  font-size: 13px;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-inner a {
+  color: #aaa;
+}
+
+.footer-inner a:hover {
+  color: #e74c3c;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  font-family: Arial, sans-serif;
+}
+
+.btn-red {
+  background: #c0392b;
+  color: #fff;
+}
+
+.btn-red:hover {
+  background: #a93226;
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #c0392b;
+  border: 2px solid #c0392b;
+}
+
+.btn-outline:hover {
+  background: #c0392b;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ===== CARDS ===== */
+.card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 24px;
+}
+
+.card-red-top {
+  border-top: 3px solid #c0392b;
+}
+
+/* ===== SECTION TITLE ===== */
+.section-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.section-title span {
+  color: #c0392b;
+}
+
+/* ===== GRID ===== */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 800px) {
+  .header-main { padding: 14px 20px; flex-direction: column; gap: 12px; text-align: center; }
+  nav ul { padding: 0 10px; flex-wrap: wrap; }
+  .page-title-bar { padding: 14px 20px; }
+  .page-body { padding: 0 20px; }
+  .grid-2, .grid-3 { grid-template-columns: 1fr; }
+  footer { padding: 24px 20px; }
+  .footer-inner { flex-direction: column; gap: 10px; }
+}

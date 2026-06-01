@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Обратная связь — ТермоКонтроль</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .form-wrap {
+      max-width: 640px;
+    }
+
+    .form-note {
+      background: #f9f9f9;
+      border: 1px solid #e0e0e0;
+      border-left: 4px solid #c0392b;
+      border-radius: 4px;
+      padding: 14px 18px;
+      font-size: 0.85rem;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .field-group {
+      margin-bottom: 18px;
+    }
+
+    .field-group label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: bold;
+      color: #444;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .field-group label .req { color: #c0392b; }
+
+    .field-group input,
+    .field-group select,
+    .field-group textarea {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 0.92rem;
+      font-family: Arial, sans-serif;
+      color: #222;
+      background: #fff;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+
+    .field-group input:focus,
+    .field-group select:focus,
+    .field-group textarea:focus {
+      border-color: #c0392b;
+      box-shadow: 0 0 0 2px rgba(192,57,43,0.1);
+    }
+
+    .field-group textarea {
+      resize: vertical;
+      min-height: 110px;
+    }
+
+    .field-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .form-submit {
+      background: #c0392b;
+      color: #fff;
+      border: none;
+      padding: 12px 32px;
+      font-size: 0.95rem;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+
+    .form-submit:hover { background: #a93226; }
+
+    /* Success / Error states */
+    .msg-success {
+      display: none;
+      background: #eafaf1;
+      border: 1px solid #a9dfbf;
+      border-left: 4px solid #27ae60;
+      border-radius: 4px;
+      padding: 20px 24px;
+      font-size: 0.9rem;
+      color: #1e8449;
+      line-height: 1.6;
+      margin-top: 20px;
+    }
+
+    .msg-error {
+      display: none;
+      background: #fff5f5;
+      border: 1px solid #f5c6c6;
+      border-left: 4px solid #c0392b;
+      border-radius: 4px;
+      padding: 16px 20px;
+      font-size: 0.85rem;
+      color: #c0392b;
+      margin-top: 12px;
+    }
+
+    .info-sidebar {
+      background: #f9f9f9;
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      padding: 24px;
+    }
+    .info-sidebar h3 { font-size: 0.95rem; margin-bottom: 14px; color: #1a1a1a; }
+    .info-sidebar ul { padding-left: 18px; }
+    .info-sidebar ul li { font-size: 0.83rem; color: #555; padding: 4px 0; line-height: 1.5; }
+    .info-sidebar ul li::marker { color: #c0392b; }
+    .info-sidebar .hotline {
+      margin-top: 20px;
+      background: #c0392b;
+      color: #fff;
+      border-radius: 4px;
+      padding: 14px 16px;
+      font-size: 0.85rem;
+    }
+    .info-sidebar .hotline strong { display: block; font-size: 1.1rem; margin: 4px 0; }
+
+    @media (max-width: 700px) {
+      .field-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-top">ООО «ТермоКонтроль» — Профессиональное IT-обслуживание компьютерной техники</div>
+  <div class="header-main">
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="ТермоКонтроль" style="height:62px; width:auto; display:block;">
+    </a>
+    <div class="header-contacts">
+      <strong>+7 (495) 123-45-67</strong><br>
+      info@termocontrol-it.ru<br>
+      Пн–Пт: 9:00–18:00
+    </div>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Главная</a></li>
+    <li><a href="about.html">О компании</a></li>
+    <li><a href="services.html">Услуги</a></li>
+    <li><a href="contacts.html">Контакты</a></li>
+    <li><a href="feedback.html" class="active">Обратная связь</a></li>
+  </ul>
+</nav>
+
+<div class="page-title-bar">
+  <div class="inner">
+    <h1>Обратная связь</h1>
+    <div class="breadcrumb"><a href="index.html">Главная</a> / Обратная связь</div>
+  </div>
+</div>
+
+<div class="page-body">
+  <div class="grid-2" style="align-items: start; gap: 36px;">
+
+    <div class="form-wrap">
+      <div class="form-note">
+        Заполните форму — мы свяжемся с вами по указанному телефону в течение 30 минут
+        в рабочее время (Пн–Пт, 9:00–18:00).
+      </div>
+
+      <form id="feedbackForm" action="https://formspree.io/f/xdajrpoy" method="POST">
+        <div class="field-row">
+          <div class="field-group">
+            <label for="name">Имя <span class="req">*</span></label>
+            <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+          </div>
+          <div class="field-group">
+            <label for="phone">Телефон <span class="req">*</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="example@mail.ru">
+        </div>
+
+        <div class="field-group">
+          <label for="service">Услуга</label>
+          <select id="service" name="service">
+            <option value="">— Выберите услугу —</option>
+            <option value="Диагностика оборудования">Диагностика оборудования</option>
+            <option value="Обслуживание ноутбука">Обслуживание ноутбука</option>
+            <option value="Установка ПО">Установка программного обеспечения</option>
+            <option value="Защита информации">Защита информации</option>
+            <option value="Аудит системы">Аудит IT-системы</option>
+            <option value="Техподдержка">Техническая поддержка</option>
+            <option value="Другое">Другое</option>
+          </select>
+        </div>
+
+        <div class="field-group">
+          <label for="message">Описание задачи</label>
+          <textarea id="message" name="message" placeholder="Опишите проблему или задачу..."></textarea>
+        </div>
+
+        
+        <input type="hidden" name="_subject" value="Новая заявка с сайта termocontrol-it.ru">
+        
+        <input type="hidden" name="_next" value="">
+
+        <div class="msg-error" id="msgError">
+          Пожалуйста, заполните обязательные поля: имя и телефон.
+        </div>
+
+        <button type="submit" class="form-submit">Отправить заявку</button>
+      </form>
+
+      <div class="msg-success" id="msgSuccess">
+        <strong>✓ Заявка успешно отправлена!</strong><br>
+        Спасибо за обращение в ТермоКонтроль. Мы свяжемся с вами по указанному телефону в течение 30 минут.
+      </div>
+    </div>
+
+    <div>
+      <div class="info-sidebar">
+        <h3>📋 Что происходит после отправки</h3>
+        <ul>
+          <li>Заявка поступает на e-mail компании</li>
+          <li>Менеджер перезванивает в течение 30 минут</li>
+          <li>Согласовываем удобное время выезда или приёма</li>
+          <li>Проводим диагностику и называем стоимость работ</li>
+          <li>Выполняем работы с гарантией</li>
+        </ul>
+
+        <div class="hotline">
+          Хотите быстрее? Звоните напрямую:
+          <strong>+7 (495) 123-45-67</strong>
+          Пн–Пт: 9:00–18:00
+        </div>
+      </div>
+
+      <div style="margin-top: 20px; border: 1px solid #e0e0e0; border-radius: 6px; padding: 20px;">
+        <h3 style="font-size: 0.95rem; margin-bottom: 12px; color: #1a1a1a;">📍 Адрес</h3>
+        <p style="font-size: 0.85rem; color: #555; line-height: 1.6;">
+          г. Оренбург, ул. Одесская, д. 146<br>
+          <span style="color: #888;">Приём по предварительной записи</span>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>© 2026 ООО «ТермоКонтроль» · termocontrol-it.ru</div>
+    <ul class="footer-links">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="about.html">О компании</a></li>
+      <li><a href="services.html">Услуги</a></li>
+      <li><a href="contacts.html">Контакты</a></li>
+      <li><a href="feedback.html">Обратная связь</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+  // Phone mask
+  var phoneInput = document.getElementById('phone');
+  phoneInput.addEventListener('input', function () {
+    var digits = this.value.replace(/\D/g, '');
+    if (digits.startsWith('8')) digits = '7' + digits.slice(1);
+    if (digits.length > 0 && !digits.startsWith('7')) digits = '7' + digits;
+    var result = '';
+    if (digits.length > 0) result = '+7';
+    if (digits.length > 1) result += ' (' + digits.substring(1, 4);
+    if (digits.length >= 4) result += ') ' + digits.substring(4, 7);
+    if (digits.length >= 7) result += '-' + digits.substring(7, 9);
+    if (digits.length >= 9) result += '-' + digits.substring(9, 11);
+    this.value = result;
+  });
+
+  // Form handling
+  var form = document.getElementById('feedbackForm');
+  var msgSuccess = document.getElementById('msgSuccess');
+  var msgError = document.getElementById('msgError');
+
+  form.addEventListener('submit', function (e) {
+    var name = document.getElementById('name').value.trim();
+    var phone = document.getElementById('phone').value.trim();
+
+    // Client-side validation
+    if (!name || !phone || phone.length < 16) {
+      e.preventDefault();
+      msgError.style.display = 'block';
+      setTimeout(function() { msgError.style.display = 'none'; }, 4000);
+      return;
+    }
+
+    // If Formspree ID is not set — show demo success
+    var action = form.getAttribute('action');
+    if (false) {
+      e.preventDefault();
+      form.style.display = 'none';
+      msgSuccess.style.display = 'block';
+    }
+    // Otherwise form submits normally to Formspree
+  });
+</script>
+
+</body>
+</html>

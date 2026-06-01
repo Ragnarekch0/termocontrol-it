@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ТермоКонтроль — IT-сервис</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Hero */
+    .hero {
+      background: #1a1a1a;
+      color: #fff;
+      padding: 50px 40px;
+    }
+    .hero .inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .hero h1 {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .hero h1 span { color: #e74c3c; }
+    .hero p {
+      color: #bbb;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    .hero-info {
+      background: #242424;
+      border: 1px solid #333;
+      border-radius: 6px;
+      padding: 24px;
+    }
+    .hero-info table { width: 100%; border-collapse: collapse; }
+    .hero-info td {
+      padding: 9px 0;
+      font-size: 0.85rem;
+      border-bottom: 1px solid #333;
+      vertical-align: top;
+    }
+    .hero-info td:first-child {
+      color: #888;
+      width: 40%;
+      padding-right: 10px;
+    }
+    .hero-info td:last-child { color: #eee; }
+    .hero-info tr:last-child td { border-bottom: none; }
+
+    /* Stats */
+    .stats-bar {
+      background: #c0392b;
+      color: #fff;
+      padding: 20px 40px;
+    }
+    .stats-bar .inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      text-align: center;
+    }
+    .stat-item { padding: 10px; border-right: 1px solid rgba(255,255,255,0.25); }
+    .stat-item:last-child { border-right: none; }
+    .stat-num { font-size: 2rem; font-weight: bold; display: block; }
+    .stat-label { font-size: 0.78rem; opacity: 0.85; margin-top: 3px; text-transform: uppercase; letter-spacing: 0.04em; }
+
+    /* Services preview */
+    .home-section { padding: 40px 40px; }
+    .home-section .inner { max-width: 1100px; margin: 0 auto; }
+
+    .service-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 16px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .service-item:last-child { border-bottom: none; }
+    .service-num {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #e0e0e0;
+      min-width: 36px;
+      line-height: 1;
+    }
+    .service-item h3 { font-size: 0.95rem; margin-bottom: 5px; color: #1a1a1a; }
+    .service-item p { font-size: 0.83rem; color: #666; line-height: 1.6; }
+
+    /* Why us */
+    .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .why-item { text-align: center; padding: 20px 12px; background: #f9f9f9; border: 1px solid #e8e8e8; border-radius: 6px; }
+    .why-icon { font-size: 2rem; margin-bottom: 12px; }
+    .why-item h4 { font-size: 0.88rem; margin-bottom: 6px; color: #1a1a1a; }
+    .why-item p { font-size: 0.78rem; color: #777; line-height: 1.5; }
+
+    @media (max-width: 800px) {
+      .hero .inner { grid-template-columns: 1fr; }
+      .stats-bar .inner { grid-template-columns: 1fr; }
+      .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.25); }
+      .home-section { padding: 30px 20px; }
+      .why-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-top">ООО «ТермоКонтроль» — Профессиональное IT-обслуживание компьютерной техники</div>
+  <div class="header-main">
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="ТермоКонтроль" style="height:62px; width:auto; display:block;">
+    </a>
+    <div class="header-contacts">
+      <strong>+7 (495) 123-45-67</strong><br>
+      info@termocontrol-it.ru<br>
+      Пн–Пт: 9:00–18:00
+    </div>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="index.html" class="active">Главная</a></li>
+    <li><a href="about.html">О компании</a></li>
+    <li><a href="services.html">Услуги</a></li>
+    <li><a href="contacts.html">Контакты</a></li>
+    <li><a href="feedback.html">Обратная связь</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <div class="inner">
+    <div>
+      <h1>Техническое обслуживание<br><span>компьютерной техники</span></h1>
+      <p>
+        ООО «ТермоКонтроль» оказывает полный спектр услуг по диагностике,
+        ремонту и обслуживанию ПК и ноутбуков для организаций и частных лиц.
+        Работаем быстро, качественно, с гарантией.
+      </p>
+      <div class="hero-actions">
+        <a href="feedback.html" class="btn btn-red">Оставить заявку</a>
+        <a href="services.html" class="btn btn-outline" style="color:#fff; border-color:#666;">Наши услуги</a>
+      </div>
+    </div>
+    <div class="hero-info">
+      <table>
+        <tr>
+          <td>Организация</td>
+          <td>ООО «ТермоКонтроль»</td>
+        </tr>
+        <tr>
+          <td>Деятельность</td>
+          <td>Техническое обслуживание компьютерной техники</td>
+        </tr>
+        <tr>
+          <td>Телефон</td>
+          <td>+7 (495) 123-45-67</td>
+        </tr>
+        <tr>
+          <td>E-mail</td>
+          <td>info@termocontrol-it.ru</td>
+        </tr>
+        <tr>
+          <td>Сайт</td>
+          <td>termocontrol-it.ru</td>
+        </tr>
+        <tr>
+          <td>Режим работы</td>
+          <td>Пн–Пт: 9:00–18:00</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="inner">
+    <div class="stat-item">
+      <span class="stat-num">5+</span>
+      <div class="stat-label">Лет на рынке IT-услуг</div>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">300+</span>
+      <div class="stat-label">Обслуженных клиентов</div>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">98%</span>
+      <div class="stat-label">Довольных заказчиков</div>
+    </div>
+  </div>
+</div>
+
+<div class="home-section" style="background:#fff;">
+  <div class="inner">
+    <div class="grid-2" style="gap:40px; align-items:start;">
+      <div>
+        <div class="section-title">Наши <span>услуги</span></div>
+        <div class="service-item">
+          <div class="service-num">01</div>
+          <div>
+            <h3>Диагностика оборудования</h3>
+            <p>Полный аудит системы с использованием AIDA64 Extreme: температура, напряжения, стресс-тест CPU, RAM, GPU, анализ дисков.</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="service-num">02</div>
+          <div>
+            <h3>Обслуживание ноутбуков</h3>
+            <p>Чистка от пыли, замена термопасты, ремонт системы охлаждения, обновление ОС и драйверов.</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="service-num">03</div>
+          <div>
+            <h3>Установка программного обеспечения</h3>
+            <p>Инсталляция и настройка ОС Windows, офисных приложений, антивирусного и прикладного ПО.</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="service-num">04</div>
+          <div>
+            <h3>Защита информации</h3>
+            <p>Антивирусная защита, резервное копирование, парольная защита документов и корпоративных систем.</p>
+          </div>
+        </div>
+        <div style="margin-top: 20px;">
+          <a href="services.html" class="btn btn-red">Все услуги →</a>
+        </div>
+      </div>
+      <div>
+        <div class="section-title">Почему <span>выбирают нас</span></div>
+        <div class="why-grid" style="grid-template-columns: 1fr 1fr;">
+          <div class="why-item">
+            <div class="why-icon">🛡️</div>
+            <h4>Гарантия качества</h4>
+            <p>Гарантия на все виды выполненных работ. Только проверенное оборудование.</p>
+          </div>
+          <div class="why-item">
+            <div class="why-icon">⚡</div>
+            <h4>Оперативность</h4>
+            <p>Быстрый выезд и решение задачи в кратчайшие сроки.</p>
+          </div>
+          <div class="why-item">
+            <div class="why-icon">💎</div>
+            <h4>Профессионализм</h4>
+            <p>Специалисты с профильным образованием и многолетним опытом.</p>
+          </div>
+          <div class="why-item">
+            <div class="why-icon">💰</div>
+            <h4>Прозрачные цены</h4>
+            <p>Чёткий прайс-лист без скрытых платежей. Смета до начала работ.</p>
+          </div>
+        </div>
+        <div style="margin-top: 20px; background: #f9f9f9; border: 1px solid #e8e8e8; border-left: 4px solid #c0392b; border-radius: 4px; padding: 16px 18px;">
+          <p style="font-size: 0.85rem; color: #444; line-height: 1.6; margin:0;">
+            <strong>Бесплатная консультация.</strong> Позвоните нам или оставьте заявку —
+            мы ответим в течение 30 минут и подберём оптимальное решение для вашей задачи.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>© 2026 ООО «ТермоКонтроль» · termocontrol-it.ru</div>
+    <ul class="footer-links">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="about.html">О компании</a></li>
+      <li><a href="services.html">Услуги</a></li>
+      <li><a href="contacts.html">Контакты</a></li>
+      <li><a href="feedback.html">Обратная связь</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>

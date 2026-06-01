@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Услуги — ТермоКонтроль</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .service-block {
+      border: 1px solid #e0e0e0;
+      border-top: 3px solid #c0392b;
+      border-radius: 6px;
+      padding: 24px;
+      margin-bottom: 24px;
+      background: #fff;
+    }
+    .service-block h2 {
+      font-size: 1.05rem;
+      margin-bottom: 12px;
+      color: #1a1a1a;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .service-block h2 .ico { font-size: 1.4rem; }
+    .service-block p { font-size: 0.87rem; color: #555; line-height: 1.7; margin-bottom: 12px; }
+    .service-block ul { padding-left: 20px; }
+    .service-block ul li { font-size: 0.85rem; color: #555; padding: 4px 0; line-height: 1.5; }
+    .service-block ul li::marker { color: #c0392b; }
+
+    .price-tag {
+      display: inline-block;
+      background: #f5f5f5;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 4px 12px;
+      font-size: 0.78rem;
+      color: #888;
+      margin-top: 8px;
+    }
+
+    .steps-list { counter-reset: steps; padding: 0; list-style: none; }
+    .steps-list li {
+      counter-increment: steps;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+      font-size: 0.85rem;
+      color: #555;
+    }
+    .steps-list li:last-child { border-bottom: none; }
+    .steps-list li::before {
+      content: counter(steps);
+      background: #c0392b;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: bold;
+      min-width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-top">ООО «ТермоКонтроль» — Профессиональное IT-обслуживание компьютерной техники</div>
+  <div class="header-main">
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="ТермоКонтроль" style="height:62px; width:auto; display:block;">
+    </a>
+    <div class="header-contacts">
+      <strong>+7 (495) 123-45-67</strong><br>
+      info@termocontrol-it.ru<br>
+      Пн–Пт: 9:00–18:00
+    </div>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Главная</a></li>
+    <li><a href="about.html">О компании</a></li>
+    <li><a href="services.html" class="active">Услуги</a></li>
+    <li><a href="contacts.html">Контакты</a></li>
+    <li><a href="feedback.html">Обратная связь</a></li>
+  </ul>
+</nav>
+
+<div class="page-title-bar">
+  <div class="inner">
+    <h1>Услуги</h1>
+    <div class="breadcrumb"><a href="index.html">Главная</a> / Услуги</div>
+  </div>
+</div>
+
+<div class="page-body">
+  <div class="grid-2" style="align-items: start;">
+    <div>
+
+      <div class="service-block">
+        <h2><span class="ico">🔍</span> Диагностика оборудования</h2>
+        <p>
+          Проводим полный аудит состояния компьютерной техники с формированием подробного отчёта.
+          Используем профессиональные инструменты: <strong>AIDA64 Extreme</strong> и <strong>HWiNFO</strong>.
+        </p>
+        <p>Что включает диагностика:</p>
+        <ul>
+          <li>Мониторинг температуры процессора и видеокарты</li>
+          <li>Проверка напряжений и тактовых частот</li>
+          <li>Тестирование оперативной памяти на ошибки</li>
+          <li>Анализ состояния жёсткого диска (S.M.A.R.T.)</li>
+          <li>Стресс-тест CPU, FPU, GPU, RAM</li>
+          <li>Формирование отчёта о состоянии ПК</li>
+        </ul>
+        <div class="price-tag">Бесплатная первичная диагностика при заказе обслуживания</div>
+      </div>
+
+      <div class="service-block">
+        <h2><span class="ico">💻</span> Обслуживание ноутбуков</h2>
+        <p>Комплексное техническое обслуживание ноутбуков. Порядок выполнения работ:</p>
+        <ol class="steps-list">
+          <li>Первичная диагностика — визуальный осмотр и программная проверка</li>
+          <li>Чистка от пыли — продувка системы охлаждения, чистка вентилятора</li>
+          <li>Замена термопасты — нанесение на процессор (CPU) и видеочип (GPU)</li>
+          <li>Настройка ПО — обновление ОС, драйверов и приложений</li>
+        </ol>
+      </div>
+
+      <div class="service-block">
+        <h2><span class="ico">⚙️</span> Установка программного обеспечения</h2>
+        <p>Инсталляция и настройка любого программного обеспечения:</p>
+        <ul>
+          <li>Операционные системы Windows (7, 10, 11)</li>
+          <li>Драйверы устройств</li>
+          <li>Офисные приложения (Microsoft Office)</li>
+          <li>Антивирусное ПО</li>
+          <li>Специализированное прикладное программное обеспечение</li>
+        </ul>
+      </div>
+
+    </div>
+    <div>
+
+      <div class="service-block">
+        <h2><span class="ico">🔒</span> Защита информации</h2>
+        <p>Обеспечиваем комплексную защиту данных предприятия:</p>
+        <ul>
+          <li>Установка и настройка антивирусного ПО</li>
+          <li>Создание и настройка резервного копирования данных</li>
+          <li>Парольная защита документов и учётных записей</li>
+          <li>Настройка прав доступа к файлам и папкам</li>
+          <li>Работа с облачными хранилищами (Яндекс Диск, Google Диск)</li>
+          <li>Консультации по информационной безопасности</li>
+        </ul>
+      </div>
+
+      <div class="service-block">
+        <h2><span class="ico">📊</span> Аудит IT-системы</h2>
+        <p>
+          Полный анализ состояния IT-инфраструктуры предприятия.
+          По результатам аудита выдаём заключение с рекомендациями по оптимизации и устранению уязвимостей.
+        </p>
+        <ul>
+          <li>Инвентаризация аппаратного и программного обеспечения</li>
+          <li>Оценка производительности и выявление узких мест</li>
+          <li>Проверка актуальности ПО и наличия обновлений</li>
+          <li>Оценка состояния системы безопасности</li>
+          <li>Письменный отчёт с рекомендациями</li>
+        </ul>
+      </div>
+
+      <div class="service-block">
+        <h2><span class="ico">🚀</span> Техническая поддержка</h2>
+        <p>
+          Оперативная помощь при возникновении неполадок.
+          Работаем с организациями по договорам на постоянное обслуживание.
+        </p>
+        <ul>
+          <li>Устранение программных и аппаратных неисправностей</li>
+          <li>Консультации по работе с программами</li>
+          <li>Поддержка корпоративного сайта предприятия</li>
+          <li>Выезд специалиста по заявке</li>
+        </ul>
+        <div style="margin-top: 16px;">
+          <a href="feedback.html" class="btn btn-red">Оставить заявку</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>© 2026 ООО «ТермоКонтроль» · termocontrol-it.ru</div>
+    <ul class="footer-links">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="about.html">О компании</a></li>
+      <li><a href="services.html">Услуги</a></li>
+      <li><a href="contacts.html">Контакты</a></li>
+      <li><a href="feedback.html">Обратная связь</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>

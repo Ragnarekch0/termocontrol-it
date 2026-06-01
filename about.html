@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О компании — ТермоКонтроль</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .about-block { margin-bottom: 36px; }
+    .about-block p { color: #444; line-height: 1.75; margin-bottom: 12px; font-size: 0.92rem; }
+    .info-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    .info-table tr:nth-child(even) td { background: #f9f9f9; }
+    .info-table td {
+      padding: 10px 14px;
+      font-size: 0.88rem;
+      border: 1px solid #e0e0e0;
+      vertical-align: top;
+    }
+    .info-table td:first-child {
+      color: #555;
+      font-weight: bold;
+      width: 35%;
+      background: #f5f5f5;
+    }
+    .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 10px; }
+    .team-card {
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      padding: 20px;
+      text-align: center;
+      background: #fafafa;
+    }
+    .team-avatar {
+      width: 64px; height: 64px;
+      background: #c0392b;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem;
+      margin: 0 auto 12px;
+    }
+    .team-card h4 { font-size: 0.9rem; margin-bottom: 4px; }
+    .team-card span { font-size: 0.78rem; color: #888; }
+    @media (max-width: 700px) { .team-grid { grid-template-columns: 1fr 1fr; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-top">ООО «ТермоКонтроль» — Профессиональное IT-обслуживание компьютерной техники</div>
+  <div class="header-main">
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="ТермоКонтроль" style="height:62px; width:auto; display:block;">
+    </a>
+    <div class="header-contacts">
+      <strong>+7 (495) 123-45-67</strong><br>
+      info@termocontrol-it.ru<br>
+      Пн–Пт: 9:00–18:00
+    </div>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Главная</a></li>
+    <li><a href="about.html" class="active">О компании</a></li>
+    <li><a href="services.html">Услуги</a></li>
+    <li><a href="contacts.html">Контакты</a></li>
+    <li><a href="feedback.html">Обратная связь</a></li>
+  </ul>
+</nav>
+
+<div class="page-title-bar">
+  <div class="inner">
+    <h1>О компании</h1>
+    <div class="breadcrumb"><a href="index.html">Главная</a> / О компании</div>
+  </div>
+</div>
+
+<div class="page-body">
+  <div class="grid-2" style="align-items: start;">
+
+    <div>
+      
+      <div class="about-block">
+        <div class="section-title">О <span>нас</span></div>
+        <p>
+          ООО «ТермоКонтроль» — специализированная компания, оказывающая полный спектр услуг
+          по техническому обслуживанию компьютерной техники и сопровождению программного обеспечения
+          для организаций и частных лиц.
+        </p>
+        <p>
+          Компания работает на рынке IT-услуг более 5 лет. За это время мы обслужили свыше 300 клиентов
+          и завоевали репутацию надёжного партнёра в сфере технической поддержки. Основу
+          деятельности составляют диагностика оборудования, ремонт ноутбуков, установка и настройка
+          программного обеспечения, защита информации и IT-аудит предприятий.
+        </p>
+        <p>
+          На вооружении наших специалистов — современные профессиональные инструменты:
+          AIDA64 Extreme для комплексного аудита систем, HWiNFO для мониторинга компонентов
+          в реальном времени, а также лицензионное прикладное программное обеспечение.
+        </p>
+      </div>
+
+      
+      <div class="about-block">
+        <div class="section-title">Миссия и <span>ценности</span></div>
+        <p>
+          <strong>Миссия:</strong> обеспечить бесперебойную работу IT-инфраструктуры наших
+          клиентов, используя передовые методы диагностики и профессиональный подход к обслуживанию.
+        </p>
+        <p>
+          <strong>Гарантия качества.</strong> Мы предоставляем гарантию на все виды выполненных работ
+          и используем только проверенное оборудование и лицензионное ПО.
+        </p>
+        <p>
+          <strong>Прозрачность.</strong> Стоимость работ согласовывается с клиентом до их начала.
+          Чёткий прайс-лист без скрытых платежей.
+        </p>
+        <p>
+          <strong>Индивидуальный подход.</strong> Каждый клиент получает решение, разработанное
+          с учётом конкретных задач и особенностей его техники.
+        </p>
+      </div>
+    </div>
+
+    <div>
+      
+      <div class="about-block">
+        <div class="section-title">Сведения об <span>организации</span></div>
+        <table class="info-table">
+          <tr><td>Полное наименование</td><td>Общество с ограниченной ответственностью «ТермоКонтроль»</td></tr>
+          <tr><td>Сокращённое</td><td>ООО «ТермоКонтроль»</td></tr>
+          <tr><td>Вид деятельности</td><td>Техническое обслуживание компьютерной техники и сопровождение ПО</td></tr>
+          <tr><td>Телефон</td><td>+7 (495) 123-45-67</td></tr>
+          <tr><td>E-mail</td><td>info@termocontrol-it.ru</td></tr>
+          <tr><td>Сайт</td><td>termocontrol-it.ru</td></tr>
+          <tr><td>Режим работы</td><td>Понедельник – Пятница: 9:00–18:00</td></tr>
+        </table>
+      </div>
+
+      
+      <div class="about-block">
+        <div class="section-title">Наши <span>преимущества</span></div>
+        <table class="info-table">
+          <tr><td>Опыт</td><td>Более 5 лет работы на рынке IT-услуг</td></tr>
+          <tr><td>Клиенты</td><td>Свыше 300 обслуженных организаций и частных лиц</td></tr>
+          <tr><td>Удовлетворённость</td><td>98% довольных заказчиков по итогам опросов</td></tr>
+          <tr><td>Инструменты</td><td>Лицензионное ПО: AIDA64 Extreme, HWiNFO и другие</td></tr>
+          <tr><td>Гарантия</td><td>Предоставляется на все виды выполненных работ</td></tr>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  
+  <div class="about-block" style="margin-top: 10px;">
+    <div class="section-title">Наша <span>команда</span></div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar">👨‍💼</div>
+        <h4>Руководитель</h4>
+        <span>Управление, работа с клиентами, IT-аудит предприятий</span>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">🔧</div>
+        <h4>Инженер-диагност</h4>
+        <span>Диагностика оборудования, ремонт ноутбуков, замена термопасты</span>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">💻</div>
+        <h4>Системный администратор</h4>
+        <span>Установка ПО, настройка ОС, защита информации, техподдержка</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>© 2026 ООО «ТермоКонтроль» · termocontrol-it.ru</div>
+    <ul class="footer-links">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="about.html">О компании</a></li>
+      <li><a href="services.html">Услуги</a></li>
+      <li><a href="contacts.html">Контакты</a></li>
+      <li><a href="feedback.html">Обратная связь</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>
